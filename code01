@@ -1,0 +1,26 @@
+
+User data:
+#!/bin/bash
+yum -y update
+yum install -y ruby
+yum install -y aws-cli
+sudo yum install wget
+cd /home/ec2-user
+wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo service codedeploy-agent status
+
+```
+wget https://{bucket-name}.s3.amazonaws.com/latest/install
+## bucket-name represents one of the following:
+## aws-codedeploy-us-east-1 for instances in the US East (N. Virginia) region
+## aws-codedeploy-us-west-1 for instances in the US West (N. California) region
+## aws-codedeploy-us-west-2 for instances in the US West (Oregon) region
+## aws-codedeploy-eu-west-1 for instances in the EU (Ireland) region
+## aws-codedeploy-eu-central-1 for instances in the EU (Frankfurt) region
+## aws-codedeploy-ap-northeast-1 for instances in the Asia Pacific (Tokyo) region
+## aws-codedeploy-ap-southeast-1 for instances in the Asia Pacific (Singapore) region
+## aws-codedeploy-ap-southeast-2 for instances in the Asia Pacific (Sydney) region
+## aws-codedeploy-sa-east-1 for instances in the South America (São Paulo) region
+```
